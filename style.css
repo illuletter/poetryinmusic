@@ -1,0 +1,58 @@
+:root { font-size: 16px; }
+* { margin: 0; animation: coverRelease 1s; }
+@keyframes coverRelease { 0% { opacity: 0; } 100% { opacity: 1; } }
+@font-face { font-family: 'Nexa Rust'; src: url('nexa-rust.otf') format('opentype'); }
+html, body { width: 100%;  overflow-x: hidden; margin: 0; padding: 0; }
+.section {
+    height: 100%; width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Nexa Rust';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    transition: opacity 0.3s;
+}
+#controller { height: 375%; width: 100%; display: block; }
+#slideOne { background-image: url('imgSlideOne.jpg'); z-index: 6; }
+#slideTwo { background-image: url('imgSlideTwo.jpg'); z-index: 5; }
+#slideThree { background-image: url('imgSlideThree.jpg'); z-index: 4; }
+#slideFour { background-image: url('imgSlideFour.jpg'); z-index: 3; }
+#slideFive { background-image: url('imgSlideFive.jpg'); z-index: 2; }
+#slideSix { background-image: url('imgSlideSix.jpg'); z-index: 1; }
+.textAlign {
+    width: 90vw; height: 85vh;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+h1 { font-size: 5rem; }
+h2 { font-size: 2rem; text-shadow: 2px 2px #00000080; transition: opacity 0.3s; }
+span { font-family: Impact, sans-serif; }
+#slideFivePtTwo, #slideFivePtThree { opacity: 0; }
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+button:hover {
+    background-color: #ce549b;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-5px);
+}
+button:active { transform: translateY(1px); }
